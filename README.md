@@ -30,7 +30,11 @@ link: https://mega.nz/file/zt1TTIhK#ZuMbg5ZjGWzWX1I6nEUbfjMZgCmAgeqJlwDkqdIryfg
 ## 模型
 
 ## Metrics
+CROSSENTROPYLOSS (default softmax)
 
+![image](https://user-images.githubusercontent.com/77257138/149958939-32579188-252f-4b12-8a86-459ebfb48422.png)
+
+Note:This criterion combines LogSoftmax and NLLLoss in one single class.
 ## 成果
 
 ## Reference
