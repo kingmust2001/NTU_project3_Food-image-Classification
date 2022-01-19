@@ -51,3 +51,6 @@ http://pytorch.org/vision/stable/index.html
 
 * logits = not normalized; probability = normalized
 ![image](https://user-images.githubusercontent.com/77257138/149957107-3734efc9-1314-48bd-bea6-2c70359c142a.png)
+
+* dataset folder
+![image](https://user-images.githubusercontent.com/77257138/150145669-8f37d64e-75e1-43b6-ae86-80f4a388d17a.png)
