@@ -25,10 +25,11 @@ link: https://mega.nz/file/zt1TTIhK#ZuMbg5ZjGWzWX1I6nEUbfjMZgCmAgeqJlwDkqdIryfg
 * Testing set: 3347 images
 
 ## Data augmentations
-
-
+* resize image to (128,128)
+* 隨機調整圖片的亮度(brightness)、對比(contrast)、飽和度(saturation)和色調(hue)
+* normalize in model layer
 ## 模型
-
+3 layers of convolution & maxpooling + 2 layers of fully-connected layer
 ## Metrics
 CROSSENTROPYLOSS (default softmax)
 
@@ -36,13 +37,27 @@ CROSSENTROPYLOSS (default softmax)
 
 Note:This criterion combines LogSoftmax and NLLLoss in one single class.
 ## 成果
+* epoch:10 batch size:128
 
+  Train: loss = 1.25415, acc = 0.58594
+  
+  Valid: loss = 1.66544, acc = 0.42865
+
+* epoch:10 batch size:16 (only revise batch size)
+
+  Train: loss = 0.78096, acc = 0.74223
+  
+  Valid: loss = 1.66736, acc = 0.48214
+  
+conclusion: A greater batch size usually gives a more stable gradient. But the GPU memory is limited, so please adjust it carefully.
 ## Reference
 https://speech.ee.ntu.edu.tw/~hylee/ml/2021-spring.html
 
 https://pytorch.org/
 
 http://pytorch.org/vision/stable/index.html
+
+https://chih-sheng-huang821.medium.com/03-pytorch-dataaug-a712a7a7f55e
 
 ## Other 
 * Improve the performance with additional unlabeled images. 
